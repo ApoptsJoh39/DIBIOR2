@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Biorreactores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculadora de Biorreactores</h1>
+            <p>Diseño y cálculo de biorreactores industriales</p>
+        </header>
+
+        <div class="type-selector">
+            <button class="type-btn active" data-type="airlift">Air-Lift</button>
+            <button class="type-btn" data-type="tanque">Tanque Agitado</button>
+        </div>
+
+        <div id="formContainer">
+            <form id="airliftForm" class="bioreactor-form active">
+                <h2>Biorreactor Air-Lift</h2>
+
+                <div class="section">
+                    <h3>Datos Básicos</h3>
+                    <div class="form-group">
+                        <label>Microorganismo Inóculo:</label>
+                        <input type="text" name="microorganismoInoculo" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre del Desarrollador:</label>
+                        <input type="text" name="nombreDesarrollador" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Sustrato Óptimo:</label>
+                        <input type="text" name="sustratoOptimo" required>
+                    </div>
+                    <div class="form-group">
+                        <label>pH Óptimo:</label>
+                        <input type="number" step="0.01" name="optimoPh" required>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Especificaciones Air-Lift</h3>
+                    <div class="form-group">
+                        <label>Luz Aplicable:</label>
+                        <input type="text" name="luzAplicable" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Difusor Entra:</label>
+                        <input type="text" name="difusorEntra" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Altura Tanque (m):</label>
+                        <input type="number" step="0.01" name="alturaTanque" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Altura Riser (m):</label>
+                        <input type="number" step="0.01" name="alturaRiser" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Diámetro Downconer (m):</label>
+                        <input type="number" step="0.01" name="diametroDownconer" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Diámetro Riser (m):</label>
+                        <input type="number" step="0.01" name="diametroRiser" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Porcentaje Operacional (%):</label>
+                        <input type="number" step="0.01" name="porcentajeOperacional" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Volumen Total (L):</label>
+                        <input type="number" step="0.01" name="volumenTotal" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Volumen Operacional (L):</label>
+                        <input type="number" step="0.01" name="volumenOperacional" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Calcular Biorreactor</button>
+            </form>
+
+            <form id="tanqueForm" class="bioreactor-form">
+                <h2>Tanque Agitado</h2>
+
+                <div class="section">
+                    <h3>Datos Básicos</h3>
+                    <div class="form-group">
+                        <label>Microorganismo Inóculo:</label>
+                        <input type="text" name="microorganismoInoculo" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre del Desarrollador:</label>
+                        <input type="text" name="nombreDesarrollador" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Sustrato Óptimo:</label>
+                        <input type="text" name="sustratoOptimo" required>
+                    </div>
+                    <div class="form-group">
+                        <label>pH Óptimo:</label>
+                        <input type="number" step="0.01" name="optimoPh" required>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Especificaciones Tanque Agitado</h3>
+                    <div class="form-group">
+                        <label>Volumen Operacional (L):</label>
+                        <input type="number" step="0.01" name="volumenOperacionalTa" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Volumen Total (L):</label>
+                        <input type="number" step="0.01" name="volumenTotalTa" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Diámetro Tanque (m):</label>
+                        <input type="number" step="0.01" name="diametroTanque" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Diámetro Impulsor (m):</label>
+                        <input type="number" step="0.01" name="diametroImpulsor" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Altura Tanque (m):</label>
+                        <input type="number" step="0.01" name="alturaTanqueTa" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Altura Líquido (m):</label>
+                        <input type="number" step="0.01" name="alturaLiquido" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Número de Deflectores:</label>
+                        <input type="number" name="numeroDeflectores" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Anchura Deflectores (m):</label>
+                        <input type="number" step="0.01" name="anchuraDeflectores" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Porcentaje Operacional (%):</label>
+                        <input type="number" step="0.01" name="porcentajeOperacionalTa" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Separación Pared-Deflectores (m):</label>
+                        <input type="number" step="0.01" name="separacionPared_Deflectores" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Longitud Útil Agitador (m):</label>
+                        <input type="number" step="0.01" name="longitudUtilAgitador" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Distancia Agitador-Base (m):</label>
+                        <input type="number" step="0.01" name="distanciaAgitador_Base" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Número de Álabes:</label>
+                        <input type="number" step="0.01" name="numeroAlabes" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Anchura Álabes (m):</label>
+                        <input type="number" step="0.01" name="anchuraAlabes" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Longitud Álabes (m):</label>
+                        <input type="number" step="0.01" name="longitudAlabes" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Calcular Biorreactor</button>
+            </form>
+        </div>
+
+        <div id="resultContainer" class="result-container hidden">
+            <div class="result-header">
+                <h2>Resultados del Cálculo</h2>
+                <p class="save-notice">Recuerda tomar una captura de pantalla si deseas guardar estos datos localmente</p>
+            </div>
+            <div id="resultContent" class="result-content"></div>
+            <div class="result-actions">
+                <button id="newCalculation" class="action-btn primary">Crear Nuevo Biorreactor</button>
+                <button id="printResults" class="action-btn secondary">Imprimir Resultados</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Rápido - Calculadora de Biorreactores</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+        h1 {
+            color: #2a5298;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #2a5298;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #2a5298;
+            padding-bottom: 10px;
+        }
+        .step {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+        }
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #28a745;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 10px 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #218838;
+        }
+        .center {
+            text-align: center;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Biorreactores</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">
+            Guía de inicio rápido para usar la aplicación
+        </p>
+
+        <h2>Requisitos Previos</h2>
+        <ul>
+            <li>Java 8 o superior instalado</li>
+            <li>Navegador web moderno (Chrome, Firefox, Edge, Safari)</li>
+        </ul>
+
+        <h2>Instrucciones para Linux/Mac</h2>
+
+        <div class="step">
+            <span class="step-number">1</span>
+            <strong>Compilar el proyecto</strong>
+            <div class="code">./compile.sh</div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">2</span>
+            <strong>Iniciar el servidor</strong>
+            <div class="code">./run.sh</div>
+            <p style="margin-top: 10px;">El servidor iniciará en el puerto 8080</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">3</span>
+            <strong>Abrir el frontend</strong>
+            <p style="margin-top: 10px;">Abre en tu navegador el archivo: <code>frontend/index.html</code></p>
+        </div>
+
+        <h2>Instrucciones para Windows</h2>
+
+        <div class="step">
+            <span class="step-number">1</span>
+            <strong>Compilar el proyecto</strong>
+            <p style="margin-top: 10px;">Doble clic en: <code>compile.bat</code></p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">2</span>
+            <strong>Iniciar el servidor</strong>
+            <p style="margin-top: 10px;">Doble clic en: <code>run.bat</code></p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">3</span>
+            <strong>Abrir el frontend</strong>
+            <p style="margin-top: 10px;">Doble clic en: <code>frontend/index.html</code></p>
+        </div>
+
+        <h2>Cómo Usar la Aplicación</h2>
+
+        <ol style="margin-left: 20px;">
+            <li>Selecciona el tipo de biorreactor (Air-Lift o Tanque Agitado)</li>
+            <li>Completa todos los campos del formulario</li>
+            <li>Haz clic en "Calcular Biorreactor"</li>
+            <li>Los resultados aparecerán inmediatamente</li>
+            <li>Usa "Crear Nuevo Biorreactor" para hacer otro cálculo</li>
+        </ol>
+
+        <div class="warning">
+            <strong>IMPORTANTE:</strong> Esta aplicación NO guarda datos en ninguna base de datos.
+            Si deseas conservar los resultados, toma una captura de pantalla o usa el botón de imprimir.
+        </div>
+
+        <div class="success">
+            <strong>Características:</strong>
+            <ul>
+                <li>Cálculos en tiempo real</li>
+                <li>Sin almacenamiento de datos</li>
+                <li>Interfaz intuitiva y fácil de usar</li>
+                <li>Funciona completamente en tu equipo local</li>
+            </ul>
+        </div>
+
+        <h2>Solución de Problemas</h2>
+
+        <div class="step">
+            <strong>Error de conexión con el servidor:</strong>
+            <ul>
+                <li>Verifica que el servidor Java esté ejecutándose</li>
+                <li>Confirma que el puerto 8080 esté libre</li>
+                <li>Revisa que no haya firewall bloqueando la conexión</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <strong>Error al compilar:</strong>
+            <ul>
+                <li>Verifica tu versión de Java: <code>java -version</code></li>
+                <li>Debe ser Java 8 o superior</li>
+                <li>Asegúrate de que la carpeta lib/ contenga json.jar</li>
+            </ul>
+        </div>
+
+        <div class="center">
+            <p style="color: #666; margin-top: 40px;">
+                Para más detalles, consulta el archivo README_INSTRUCCIONES.txt
+            </p>
+        </div>
+    </div>
+</body>
+</html>
